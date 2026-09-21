@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../host/src/*"],
+      "@fairflow/slot-catalog": ["../../host/testing/fixtures/slot-catalog.ts"],
+      "@fairflow/shared-ui": ["../../host/testing/fixtures/shared-ui-stub.tsx"],
+      "react": ["../../host/node_modules/@types/react"],
+      "react/*": ["../../host/node_modules/@types/react/*"],
+      "react-dom": ["../../host/node_modules/@types/react-dom"],
+      "react-dom/*": ["../../host/node_modules/@types/react-dom/*"],
+      "react-highlight-words": ["../../host/node_modules/@types/react-highlight-words"],
+      "react-icons/*": ["../../host/node_modules/react-icons/*"],
+      "dayjs": ["../../host/node_modules/dayjs"],
+      "swr": ["../../host/node_modules/swr"],
+      "react-router": ["../../host/node_modules/react-router/dist/development/index.d.ts"],
+      "react-router/*": ["../../host/node_modules/react-router/*"],
+      "vitest": ["../../host/node_modules/vitest"],
+      "vitest/*": ["../../host/node_modules/vitest/*"],
+      "@testing-library/*": ["../../host/node_modules/@testing-library/*"]
+    }
+  },
+  // federation-remotes.d.ts объявляет virtual-модули `remote*/…`, на которые
+  // ссылается host/src/utils/loadRemoteComponent (его импортирует host-wiring.test).
+  "include": [
+    "src",
+    "../../host/src/@types/federation-remotes.d.ts",
+    "../../host/src/vite-env.d.ts"
+  ],
+  "exclude": ["src/vite-entry.ts", "src/vite-entry-app.tsx"]
+}

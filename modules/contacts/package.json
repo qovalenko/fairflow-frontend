@@ -1,0 +1,46 @@
+{
+  "name": "@fairflow/module-contacts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:standalone": "VITE_STANDALONE_MODE=true VITE_AUTH_PERSIST_STRATEGY=localStorage vite",
+    "build": "vite build",
+    "build:standalone": "VITE_STANDALONE_MODE=true VITE_AUTH_PERSIST_STRATEGY=localStorage vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "preview": "vite preview",
+    "preview:standalone": "VITE_STANDALONE_MODE=true VITE_AUTH_PERSIST_STRATEGY=localStorage vite preview"
+  },
+  "dependencies": {
+    "@fairflow/shared-ui": "^0.1.0",
+    "dayjs": "^1.11.13",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-router": "^7.0.0",
+    "swr": "^2.3.6",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.3.7",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/react": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "jsdom": "26.1.0",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vitest": "3.2.4"
+  }
+}

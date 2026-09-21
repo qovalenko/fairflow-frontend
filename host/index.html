@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fairflow — управление проектами и CRM">
+    <title>Fairflow</title>
+    <!-- Microfrontend manifest: resolves each remote's versioned URL at runtime.
+         The only no-cache file besides index.html; everything under /frontend/* is immutable. -->
+    <script>
+      window.__MF_MANIFEST_READY__ = fetch('/fe-manifest.json', { cache: 'no-store' })
+        .then(function (r) { return r.json(); })
+        .then(function (m) { window.__MF_MANIFEST__ = m; return m; })
+        .catch(function (e) {
+          console.error('[mf] manifest load failed', e);
+          window.__MF_MANIFEST_FAILED__ = true;
+          return { remotes: {} };
+        });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

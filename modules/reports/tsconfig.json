@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../host/src/*"],
+      "@fairflow/shared-ui": ["../../host/node_modules/@fairflow/shared-ui/dist/index.d.ts"],
+      "react": ["../../host/node_modules/@types/react"],
+      "react/*": ["../../host/node_modules/@types/react/*"],
+      "react-dom": ["../../host/node_modules/@types/react-dom"],
+      "react-dom/*": ["../../host/node_modules/@types/react-dom/*"]
+    }
+  },
+  "include": ["src", "../../host/src/vite-env.d.ts"]
+}

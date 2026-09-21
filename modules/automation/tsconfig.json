@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../host/src/*"],
+      "@fairflow/slot-catalog": ["../../../be-r3-ui-shell/shared/src/slot-catalog.ts"],
+      "@xyflow/react": ["../../../fe-p0/modules/automation/node_modules/@xyflow/react"],
+      "@dagrejs/dagre": ["../../../fe-p0/modules/automation/node_modules/@dagrejs/dagre"],
+      "@dagrejs/graphlib": ["../../../fe-p0/modules/automation/node_modules/@dagrejs/graphlib"],
+      "react": ["../../host/node_modules/@types/react"],
+      "react/*": ["../../host/node_modules/@types/react/*"],
+      "react-dom": ["../../host/node_modules/@types/react-dom"],
+      "react-dom/*": ["../../host/node_modules/@types/react-dom/*"],
+      "react-csv": ["../../host/node_modules/@types/react-csv"],
+      "axios": ["../../host/node_modules/axios"],
+      "react-select": ["../../host/node_modules/react-select"]
+    }
+  },
+  "include": ["src", "../../host/src/vite-env.d.ts", "../../host/src/@types/federation-remotes.d.ts"],
+  "exclude": ["src/vite-entry.ts", "src/vite-entry-app.tsx", "src/federation"]
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../host/src/*"],
+      "@fairflow/slot-catalog": ["../../../be-r3-ui-shell/shared/src/slot-catalog.ts"],
+      "react": ["../../host/node_modules/@types/react"],
+      "react/*": ["../../host/node_modules/@types/react/*"],
+      "react-dom": ["../../host/node_modules/@types/react-dom"],
+      "react-dom/*": ["../../host/node_modules/@types/react-dom/*"],
+      "react-csv": ["../../host/node_modules/@types/react-csv"]
+    }
+  },
+  "include": ["src", "../../host/src/@types/federation-remotes.d.ts"]
+}

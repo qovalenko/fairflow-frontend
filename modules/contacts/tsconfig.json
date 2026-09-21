@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../../host/src/*"],
+      "react": ["../../host/node_modules/@types/react"],
+      "react/*": ["../../host/node_modules/@types/react/*"],
+      "react-dom": ["../../host/node_modules/@types/react-dom"],
+      "react-dom/*": ["../../host/node_modules/@types/react-dom/*"],
+      "react-csv": ["../../host/node_modules/@types/react-csv"],
+      "axios": ["../../host/node_modules/axios"]
+    }
+  },
+  "include": ["src"]
+}

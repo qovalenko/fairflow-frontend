@@ -1,0 +1,71 @@
+@keyframes scroll {
+    to {
+    transform: translateY(calc(-50% - 0.5rem));
+    }
+}
+
+@keyframes aurora {
+    from {
+        background-position: 50% 50%, 50% 50%;
+    }
+    to {
+        background-position: 350% 50%, 350% 50%;
+    }
+}
+
+.animate-scroll {
+    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+    &.animation-play-state-paused:hover {
+        animation-play-state: paused;
+    }
+}
+
+.animate-aurora:after {
+    animation: aurora 60s linear infinite;
+}
+
+@keyframes header-back-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes header-back-slide-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+}
+
+.animate-header-back-in {
+    animation: header-back-slide-in 0.34s ease-in-out forwards;
+}
+
+.animate-header-back-out {
+    animation: header-back-slide-out 0.34s ease-in-out forwards;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-page-fade-in {
+    animation: page-fade-in 0.3s ease-out forwards;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@fairflow/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Playwright e2e smoke harness for FairFlow (T-029, track qa-ci).",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report test-results/html-report",
+    "allure:report": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "install:browsers": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@playwright/test": "1.61.1",
+    "@types/node": "^22.10.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.19.0"
+  }
+}
